@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Banner1 from './Components/Banner1';
+import Cardposts from './Components/Cardposts';
+import NavBar from './Components/NavBar';
+import Netoriginals from './Netoriginals';
+import { action, horror, originals, romance } from './Components/Urls'
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <Banner1 /> 
+      <Netoriginals titles="ACTION"/>
+      <Cardposts url={action}/>
+      <Netoriginals titles="HORROR"/>
+      <Cardposts url={horror}/>
+      <Netoriginals titles="ROMANCE"/>
+      <Cardposts url={romance}/>/
+
+
+
+      
+      
     </div>
   );
 }
